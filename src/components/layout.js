@@ -9,7 +9,7 @@ export default function Layout({children, botoes_log_reg = true}) {
                 <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
                     <div className="flex flex-wrap justify-between items-center mx-12">
                         <Link to="/" className="flex items-center">
-                            <img src={newspaper} className="mr-3 sm:h-16" alt="Notícias de Economia" />
+                            <img src={newspaper} className="mr-3 sm:h-10" alt="Notícias de Economia" />
                             <span className="self-center text-xl font-bold whitespace-nowrap text-green-800">Notícias de Economia</span>
                         </Link>
                         <div className="flex items-center lg:order-2">
