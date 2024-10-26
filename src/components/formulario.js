@@ -5,7 +5,7 @@ export default function Formulario(){
         <div>
             <h2 className="text-lg font-bold my-6">Entre em contato:</h2>
             <div className="container">
-                <form name="form_estatico" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className="bg-green-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-6/12">
+                <form name="form_estatico" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className="bg-green-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-6/12" netlify>
                     <input type="hidden" name="form-name" value="form_estatico"/>
                     <label className="font-semibold">
                         Nome
