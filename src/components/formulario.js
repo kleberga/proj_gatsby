@@ -21,34 +21,34 @@ export default function Formulario(){
         if(inputs.nome && inputs.nome.length < 5){
             alert("O campo nome precisa ter pelo menos 5 caracteres.")
             return;
-        }
+        } else 
         if(!isEmail(inputs.email)){
             alert("E-mail inválido.")
             return;
-        }
+        } else
         if(inputs.assunto && inputs.assunto.length < 10){
             alert("O campo assunto precisa ter pelo menos 10 caracteres.")
             return;
-        }  
+        } else
         if(inputs.mensagem && inputs.mensagem.length < 20){
             alert("O campo mensagem precisa ter pelo menos 20 caracteres.")
             return;
+        } else {
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({
+                    "form-name": "form_react",
+                    nome: inputs.nome,
+                    email: inputs.email,
+                    assunto: inputs.assunto,
+                    mensagem: inputs.mensagem
+                })
+            }).then(() => {
+                    alert("Mensagem enviada com sucesso!")
+                    setInputs({nome: "", email: "", assunto: "", mensagem: ""})
+            }).catch(error => alert("Erro ao enviar a mensagem: " + error));
         }
-        event.preventDefault();
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({
-                "form-name": "form_react",
-                nome: inputs.nome,
-                email: inputs.email,
-                assunto: inputs.assunto,
-                mensagem: inputs.mensagem
-            })
-        }).then(() => {
-                alert("Mensagem enviada com sucesso!")
-                setInputs({nome: "", email: "", assunto: "", mensagem: ""})
-        }).catch(error => alert("Erro ao enviar a mensagem: " + error));
     }
 
     const isEmail = (email) =>
