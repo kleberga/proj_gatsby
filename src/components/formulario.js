@@ -21,16 +21,13 @@ export default function Formulario(){
         if(inputs.nome && inputs.nome.length < 5){
             alert("O campo nome precisa ter pelo menos 5 caracteres.")
             return;
-        } else 
-        if(!isEmail(inputs.email)){
+        } else if(!isEmail(inputs.email)){
             alert("E-mail inválido.")
             return;
-        } else
-        if(inputs.assunto && inputs.assunto.length < 10){
+        } else if(inputs.assunto && inputs.assunto.length < 10){
             alert("O campo assunto precisa ter pelo menos 10 caracteres.")
             return;
-        } else
-        if(inputs.mensagem && inputs.mensagem.length < 20){
+        } else if(inputs.mensagem && inputs.mensagem.length < 20){
             alert("O campo mensagem precisa ter pelo menos 20 caracteres.")
             return;
         } else {
@@ -54,30 +51,6 @@ export default function Formulario(){
     const isEmail = (email) =>
         /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 
-/*     const handleInputChange = (event) => {
-        event.preventDefault();
-        setNome(event.target.nome.value)
-        setEmail(event.target.email.value)
-        setAssunto(event.target.assunto.value)
-        setMensagem(event.target.mensagem.value)
-        console.log("nome: ", nome)
-        if(nome.length < 5){
-            setError("Nome precisa ter pelo menos 5 caracteres.")
-            console.log("error1: ", error)
-        } else  if(isEmail(email)){
-            setError("E-mail inválido.")
-        } else  if(assunto.length < 5){
-            setError("Assunto precisa ter pelo menos 5 caracteres.")
-        } else if(mensagem.length < 20){
-            setError("Mensagem precisa ter pelo menos 10 caracteres.")
-        } else {
-            setError("")
-        }
-        console.log("error2: ", error)
-    } */
-
-   
-    
     return(
         <div>
             <h2 className="text-lg font-bold my-6">Entre em contato:</h2>
@@ -94,6 +67,7 @@ export default function Formulario(){
                         name="nome" 
                         className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         onChange={handleInputChange}
+                        required
                         />
                     </label>
                     <br/>
@@ -104,6 +78,7 @@ export default function Formulario(){
                         type="email" 
                         name="email" 
                         className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required
                         />
                     </label>
                     <br/>
