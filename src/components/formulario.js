@@ -1,33 +1,133 @@
 import * as React from "react"
+import { useState } from "react"
 
 export default function Formulario(){
+
+    const[inputs, setInputs] = useState({nome: "", email: "", assunto: "", mensagem: ""})
+
+    const handleInputChange = (event) => {
+        const name = event.target.name
+        const value = event.target.value
+        setInputs({...inputs, [name]: value})
+    }
+
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
+    const handleSubmit = (event) => {
+        if(inputs.nome && inputs.nome.length < 5){
+            alert("O campo nome precisa ter pelo menos 5 caracteres.")
+            return;
+        }
+        if(!isEmail(inputs.email)){
+            alert("E-mail inválido.")
+            return;
+        }
+        if(inputs.assunto && inputs.assunto.length < 10){
+            alert("O campo assunto precisa ter pelo menos 10 caracteres.")
+            return;
+        }  
+        if(inputs.mensagem && inputs.mensagem.length < 20){
+            alert("O campo mensagem precisa ter pelo menos 20 caracteres.")
+            return;
+        }
+        event.preventDefault();
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({
+                "form-name": "form_react",
+                nome: inputs.nome,
+                email: inputs.email,
+                assunto: inputs.assunto,
+                mensagem: inputs.mensagem
+            })
+        }).then(() => {
+                alert("Mensagem enviada com sucesso!")
+                setInputs({nome: "", email: "", assunto: "", mensagem: ""})
+        }).catch(error => alert("Erro ao enviar a mensagem: " + error));
+    }
+
+    const isEmail = (email) =>
+        /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
+
+/*     const handleInputChange = (event) => {
+        event.preventDefault();
+        setNome(event.target.nome.value)
+        setEmail(event.target.email.value)
+        setAssunto(event.target.assunto.value)
+        setMensagem(event.target.mensagem.value)
+        console.log("nome: ", nome)
+        if(nome.length < 5){
+            setError("Nome precisa ter pelo menos 5 caracteres.")
+            console.log("error1: ", error)
+        } else  if(isEmail(email)){
+            setError("E-mail inválido.")
+        } else  if(assunto.length < 5){
+            setError("Assunto precisa ter pelo menos 5 caracteres.")
+        } else if(mensagem.length < 20){
+            setError("Mensagem precisa ter pelo menos 10 caracteres.")
+        } else {
+            setError("")
+        }
+        console.log("error2: ", error)
+    } */
+
+   
+    
     return(
         <div>
             <h2 className="text-lg font-bold my-6">Entre em contato:</h2>
             <div className="container">
-                <form name="form_estatico" method="post" data-netlify="true" data-netlify-honeypot="bot-field" className="bg-green-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-6/12" netlify>
-                    <input type="hidden" name="form-name" value="form_estatico"/>
+                <form name="form_react" method="post" onSubmit={handleSubmit} 
+                    className="bg-green-300 shadow-md rounded px-8 pt-6 pb-8 mb-4 w-6/12"
+                    data-netlify="true" data-netlify-honeypot="bot-field">
+                    <input type="hidden" name="form-name" value="form_react"/>
                     <label className="font-semibold">
                         Nome
-                        <input type="text" name="nome" className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+                        <input 
+                        value={inputs.nome}
+                        type="text" 
+                        name="nome" 
+                        className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        onChange={handleInputChange}
+                        />
                     </label>
                     <br/>
                     <br/>
                     <label className="font-semibold">
                         E-mail
-                        <input type="email" name="email" className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+                        <input 
+                        type="email" 
+                        name="email" 
+                        className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        />
                     </label>
                     <br/>
                     <br/>
                     <label className="font-semibold">
                         Assunto
-                        <input type="text" name="assunto" className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"/>
+                        <input 
+                        type="text" 
+                        name="assunto" 
+                        className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required
+                        />
                     </label>
                     <br/>
                     <br/>
                     <label className="font-semibold">
                         Mensagem
-                        <textarea rows="5" className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"></textarea>
+                        <textarea 
+                        rows="5" 
+                        name="mensagem" 
+                        className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                        required
+                        >
+                        </textarea>
                     </label>
                     <br/>
                     <br/>
