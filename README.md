@@ -10,7 +10,8 @@ No quesito técnico, a aplicação possui as seguintes características:
 - A estilização dos elementos das páginas foi reaizada utilizando o framework Tailwind CSS;
 - Cada notícia é inserida em arquivos individuais no formato Markdown, que são posteriormente convertidos em HTML e renderizados na aplicação;
 - A geração da página inicial e das páginas de cada notícia é feita filtrando os elementos dos arquivos de notícias por meio da linguagem GraphQL;
-- As imagens são otimizadas pelo plugin 'gatsby-plugin-image'; e
+- As imagens são otimizadas pelo plugin 'gatsby-plugin-image';
+- O formulário de contato tem validações em todos os campos; e
 - A aplicação está em produção na plataforma Netlify e pode ser acessada pela URL: <https://noticias-de-economia.netlify.app/>
 
 As imagens abaixo representam as telas da aplicação em funcionamento:
