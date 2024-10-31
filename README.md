@@ -2,7 +2,7 @@
 
 Aplicação web para publicação de notícias de economia. A aplicação possui as seguintes características:
 - Na página inicial são apresentados os títulos e uma breve descrição das notícias, bem como a data em que a mesma foi publicada;
-- O conteúdo de cada notícia é acessado clicando-se no título da notícia. Algumas possuem também imagens;
+- O conteúdo de cada notícia é acessado clicando-se no título da notícia. Algumas possuem possuem imagens;
 - Além da página inicial, a aplicação possui as seguintes páginas: "Sobre nós", onde constam informações do grupo empresarial que é proprietário da aplicação; "Contato", que possui um formulário para envio de dúvidas, reclamações e sugestões; e "Política de privacidade" que contém a política de privacidade da aplicação.
 
 No quesito técnico, a aplicação possui as seguintes características:
