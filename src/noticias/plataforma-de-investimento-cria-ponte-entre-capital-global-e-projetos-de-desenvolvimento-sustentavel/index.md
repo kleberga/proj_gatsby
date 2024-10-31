@@ -3,7 +3,7 @@ title: "Plataforma de Investimento cria ponte entre capital global e projetos de
 description: "Plataforma Brasil de Investimentos Climáticos e para a Transformação Ecológica – BIP é lançada como instrumento para captar recursos internacionais e intensificar a transformação ecológica em setores da economia"
 slug: "noticias/plataforma-de-investimento-cria-ponte-entre-capital-global-e-projetos-de-desenvolvimento-sustentavel"
 date: "2024-10-24"
-featuredImage: ../images/plataforma-de-investimento-cria-ponte-entre-capital-global-e-projetos-de-desenvolvimento-sustentavel.PNG
+featuredImage: imagem.PNG
 ---
 
 O Brasil e o mundo têm uma tarefa urgente: transformar as finanças globais e acelerar o movimento em direção a uma economia sustentável. Nesse contexto, foi anunciada a Plataforma Brasil de Investimento Climático e para a Transformação Ecológica (BIP), nesta quarta-feira (23/10), em Washington. A iniciativa é coordenada pelo Ministério da Fazenda, em parceria com o Ministério do Meio Ambiente e Mudança Climática, o Ministério de Minas e Energia e o Ministério do Desenvolvimento, Indústria, Comércio e Serviços do Brasil. Seu secretariado terá o apoio do BNDES, em parceria com Bloomberg Philanthropies, a Aliança Financeira de Glasgow para o Net Zero (GFANZ) e o Fundo Verde para o Clima (GCF). Participaram do evento, representantes de bancos multilaterais de desenvolvimento, incluindo o Grupo Banco Mundial, o Banco Interamericano de Desenvolvimento (BID), do Novo Banco de Desenvolvimento (NDB) e do Banco Asiático de Investimento em Infraestrutura (AIIB), entre outros.  

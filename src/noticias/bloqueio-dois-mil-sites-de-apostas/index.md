@@ -3,7 +3,7 @@ title: "Ministério da Fazenda pede bloqueio de mais de dois mil sites de aposta
 description: "A partir desta sexta-feira (11 /10), sites de bets que não constam na lista autorizada pelo MF começam a ser retirados do ar"
 slug: "noticias/bloqueio-dois-mil-sites-de-apostas"
 date: "2024-10-21"
-featuredImage: ../images/bloqueio-dois-mil-sites-de-apostas.png
+featuredImage: imagem.png
 ---
 
 Nesta sexta-feira (11/10), os sites de apostas que não constam na lista autorizada pela Secretaria de Prêmios e Apostas do Ministério da Fazenda (SPA-MF) começam a ser bloqueados em âmbito nacional. A listagem de empresas que exploram a modalidade lotérica de apostas de quota fixa sem atender aos requisitos da Portaria SPA-MF nº 1.475/2024 foi encaminhada para a Agência Nacional de Telecomunicações (Anatel), que já comunicou às empresas de telefonia para retirar do ar os domínios irregulares. Ou seja, somente os sites que estão na lista positiva do Ministério da Fazenda terão permissão para operar nacionalmente no Brasil, até dezembro. Até a noite desta quinta-feira (10/10), 96 empresas com respectivamente 210 bets estão aptas a permanecer no ar até o fim deste ano.  

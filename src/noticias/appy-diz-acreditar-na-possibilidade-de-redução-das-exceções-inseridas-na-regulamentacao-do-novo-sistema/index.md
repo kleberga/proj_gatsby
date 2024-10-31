@@ -3,7 +3,7 @@ title: "Appy diz acreditar na possibilidade de redução das exceções inserida
 description: "“A Reforma Tributária foi desenhada para mostrar que não existe almoço grátis”, afirmou o secretário em evento na UnB"
 slug: "noticias/appy-diz-acreditar-na-possibilidade-de-reducao-das-excecoes-inseridas-na-regulamentacao-do-novo-sistema"
 date: "2024-10-24"
-featuredImage: ../images/appy-diz-acreditar-na-possibilidade-de-reducao-das-excecoes-inseridas-na-regulamentacao-do-novo-sistema.PNG
+featuredImage: imagem.PNG
 ---
 
 O secretário extraordinário da Reforma Tributária do Ministério da Fazenda, Bernard Appy, disse nesta quinta-feira (24/10) que acredita na possibilidade de o Congresso Nacional, durante a tramitação do texto que regulamenta o novo sistema, reduzir as exceções e os benefícios tributários, o que daria condições para a fixação de uma alíquota de referência mais baixa para todos. “Acho que é bem possível que isso aconteça”, afirmou Appy. “A Reforma Tributária foi desenhada para mostrar que não existe almoço grátis”, enfatizou.  

@@ -3,7 +3,7 @@ title: "Inflação controlada e alta no PIB indicam potencial de crescimento sus
 description: "Em viagem aos Estados Unidos, ministro da Fazenda comentou a nova projeção do FMI para a economia brasileira: “Temos toda a condição de continuar crescendo”"
 slug: "noticias/inflacao-controlada-alta-pib-indicam-potencial-de-crescimento-sustentavel-do-brasil-afirma-haddad"
 date: "2024-10-22"
-featuredImage: ../images/inflacao-controlada-alta-pib-indicam-potencial-de-crescimento-sustentavel-do-brasil-afirma-haddad.png
+featuredImage: imagem.png
 ---
 
 A combinação de crescimento econômico e inflação controlada no Brasil é sinal de que o país possui um potencial de expansão sustentável. Segundo o ministro da Fazenda, Fernando Haddad, a revisão da projeção do Produto Interno Bruto (PIB) potencial pelo Fundo Monetário Internacional (FMI), divulgada nesta terça-feira (22/10), indica um avanço econômico sustentável com uma trajetória de crescimento contínuo.  

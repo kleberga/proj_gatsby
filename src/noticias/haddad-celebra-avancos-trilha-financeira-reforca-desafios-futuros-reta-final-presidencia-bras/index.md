@@ -3,7 +3,7 @@ title: "Haddad celebra avanços da trilha financeira e reforça desafios futuros
 description: "O ministro da Fazenda destacou o cumprimento das metas do grupo e a necessidade de novos mecanismos financeiros para enfrentar crises futuras, com foco especial nos países de baixa renda e nas mudanças climáticas"
 slug: "noticias/haddad-celebra-avancos-trilha-financeira-reforca-desafios-futuros-reta-final-presidencia-bras"
 date: "2024-10-30"
-featuredImage: ../images/haddad-celebra-avancos-trilha-financeira.png
+featuredImage: imagem.png
 ---
 
 “De certa forma, o track financeiro cumpriu sua missão”. Com essa frase, o ministro da Fazenda, Fernando Haddad, resumiu o sentimento de dever cumprido durante a coletiva de imprensa sobre a 4ª reunião de Ministros das Finanças e Governadores de Bancos Centrais do G20, nesta quinta-feira (24/10), em Washington (EUA). Durante o evento, ele destacou o papel central do grupo nas discussões das crises globais recentes e na construção de uma agenda robusta de reformas que definirá o futuro das maiores economias do planeta.  
