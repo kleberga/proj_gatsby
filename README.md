@@ -7,7 +7,7 @@ Aplicação web para publicação de notícias de economia. A aplicação possui
 
 No quesito técnico, a aplicação possui as seguintes características:
 - Foi desenvolvido utilizando-se o framework Gatsby;
-- A estilização dos elementos das páginas foi reaizada utilizando o framework Tailwind CSS;
+- A estilização dos elementos das páginas foi realizada utilizando o framework Tailwind CSS;
 - Cada notícia é inserida em arquivos individuais no formato Markdown, que são posteriormente convertidos em HTML e renderizados na aplicação;
 - A geração da página inicial e das páginas de cada notícia é feita filtrando os elementos dos arquivos de notícias por meio da linguagem GraphQL;
 - As imagens são otimizadas pelo plugin 'gatsby-plugin-image';
