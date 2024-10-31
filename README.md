@@ -15,6 +15,22 @@ No quesito técnico, a aplicação possui as seguintes características:
 
 As imagens abaixo representam as telas da aplicação em funcionamento:
 
-1. Tela inicial (Home)
+1. Página inicial (Home)
 
 ![Página Home](home.PNG)
+
+2. Página de uma notícia
+
+![Página Notícia](noticia.PNG)
+
+3. Página "Sobre nós"
+
+![Página Sobre Nós](sobre_nos.PNG)
+
+4. Página "Contato"
+
+![Página Contato](contato.PNG)
+
+5. Página "Política de privacidade"
+
+![Página Política de Privacidade](politica.PNG)
