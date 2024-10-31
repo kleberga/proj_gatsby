@@ -1,9 +1,15 @@
 import * as React from "react"
+import { useEffect } from "react"
 import { useState } from "react"
 
 export default function Formulario(){
 
     const[inputs, setInputs] = useState({nome: "", email: "", assunto: "", mensagem: ""})
+    const [validNome, setValidNome] = useState(false)
+    const [validEmail, setValidEmail] = useState(false)
+    const [validAssunto, setValidAssunto] = useState(false)
+    const [validMensagem, setValidMensagem] = useState(false)
+    const [disabledButton, setDisabledButton] = useState(true)
 
     const handleInputChange = (event) => {
         const name = event.target.name
@@ -17,20 +23,16 @@ export default function Formulario(){
             .join("&");
     }
 
-    const handleSubmit = (event) => {
-        if(inputs.nome && inputs.nome.length < 5){
-            alert("O campo nome precisa ter pelo menos 5 caracteres.")
-            return;
-        } else if(!isEmail(inputs.email)){
-            alert("E-mail inválido.")
-            return;
-        } else if(inputs.assunto && inputs.assunto.length < 10){
-            alert("O campo assunto precisa ter pelo menos 10 caracteres.")
-            return;
-        } else if(inputs.mensagem && inputs.mensagem.length < 20){
-            alert("O campo mensagem precisa ter pelo menos 20 caracteres.")
-            return;
-        } else {
+    useEffect(() => {
+        setValidNome(inputs.nome.length >= 5)
+        setValidEmail(isEmail(inputs.email))
+        setValidAssunto(inputs.assunto.length >= 10)
+        setValidMensagem(inputs.mensagem.length >= 20)
+        setDisabledButton(!(validNome && validEmail && validAssunto && validMensagem))
+    }, [inputs, validNome, validEmail, validAssunto, validMensagem, disabledButton])
+
+
+    const handleSubmit = () => {
             fetch("/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -45,7 +47,6 @@ export default function Formulario(){
                     alert("Mensagem enviada com sucesso!")
                     setInputs({nome: "", email: "", assunto: "", mensagem: ""})
             }).catch(error => alert("Erro ao enviar a mensagem: " + error));
-        }
     }
 
     const isEmail = (email) =>
@@ -69,6 +70,7 @@ export default function Formulario(){
                         onChange={handleInputChange}
                         required
                         />
+                        {!validNome && <p className="text-red-500 text-sm">Nome precisa ter pelo menos 5 caracteres</p>}
                     </label>
                     <br/>
                     <br/>
@@ -77,9 +79,11 @@ export default function Formulario(){
                         <input 
                         type="email" 
                         name="email" 
+                        onChange={handleInputChange}
                         className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         required
                         />
+                        {!validEmail && <p className="text-red-500 text-sm">E-mail inválido</p>}
                     </label>
                     <br/>
                     <br/>
@@ -88,9 +92,11 @@ export default function Formulario(){
                         <input 
                         type="text" 
                         name="assunto" 
+                        onChange={handleInputChange}
                         className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         required
                         />
+                        {!validAssunto && <p className="text-red-500 text-sm">Assunto precisa ter pelo menos 10 caracteres</p>}
                     </label>
                     <br/>
                     <br/>
@@ -99,14 +105,16 @@ export default function Formulario(){
                         <textarea 
                         rows="5" 
                         name="mensagem" 
+                        onChange={handleInputChange}
                         className="mt-2 shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                         required
                         >
                         </textarea>
+                        {!validMensagem && <p className="text-red-500 text-sm">Mensagem precisa ter pelo menos 20 caracteres</p>}
                     </label>
                     <br/>
                     <br/>
-                    <input type="submit" className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" value="Enviar" />
+                    <input type="submit" disabled={disabledButton}  className="focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800" value="Enviar" />
                     <input type="reset" className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900" value="Limpar" />
                 </form>
             </div>
