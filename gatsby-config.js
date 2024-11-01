@@ -32,5 +32,7 @@ module.exports = {
         "icon": "src/images/economia3_resize.jpg"
       }
     },
+    `gatsby-plugin-sitemap`,
+    'gatsby-plugin-robots-txt'
   ]
 };
