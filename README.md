@@ -1,4 +1,4 @@
-## Aplicação web de notícias de economia
+## Aplicação web sobre notícias de economia
 
 Aplicação web para publicação de notícias de economia. A aplicação possui as seguintes características:
 - Na página inicial são apresentados os títulos e uma breve descrição das notícias, bem como a data em que a mesma foi publicada;
