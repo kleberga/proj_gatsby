@@ -70,9 +70,9 @@ export default function Formulario(){
                         onChange={handleInputChange}
                         required
                         />
-                        {!validNome && <p className="text-red-500 text-sm">Nome precisa ter pelo menos 5 caracteres</p>}
+                        {!validNome && <div><p className="text-red-500 text-sm">Nome precisa ter pelo menos 5 caracteres</p></div>}
                     </label>
-                    <br/>
+                    {validNome && <br/>}
                     <br/>
                     <label className="font-semibold">
                         E-mail
@@ -85,7 +85,7 @@ export default function Formulario(){
                         />
                         {!validEmail && <p className="text-red-500 text-sm">E-mail inválido</p>}
                     </label>
-                    <br/>
+                    {validEmail && <br/>}
                     <br/>
                     <label className="font-semibold">
                         Assunto
@@ -98,7 +98,7 @@ export default function Formulario(){
                         />
                         {!validAssunto && <p className="text-red-500 text-sm">Assunto precisa ter pelo menos 10 caracteres</p>}
                     </label>
-                    <br/>
+                    {validAssunto && <br/>}
                     <br/>
                     <label className="font-semibold">
                         Mensagem
