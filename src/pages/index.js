@@ -4,6 +4,9 @@ import Layout from "../components/layout"
 import { graphql } from 'gatsby'
 import { Link } from "gatsby"
 import ReactPaginate from "react-paginate"
+import '../styles/global.css'
+import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
+import { IconContext } from "react-icons";
 
   export default function HomePage({data}) {
 
@@ -41,14 +44,23 @@ import ReactPaginate from "react-paginate"
             </div>
           )
           })}
-            <ReactPaginate  className="place-content-center flex flex-row space-x-2 text-xl font-bold"
-              activeClassName={"item-active"}
+            <ReactPaginate  className="place-content-center flex flex-row space-x-2 text-xl font-bold" 
+              activeClassName={"active"}
+              pageClassName={"page-item"}
               breakLabel={"..."}
               containerClassName={'pagination'}
-              nextLabel={">>"}
               onPageChange={handlePageChange}
               pageCount={totalPages}         
-              previousLabel={"<<"}
+              previousLabel={
+                <IconContext.Provider value={{ color: "#31511E", size: "36px" }}>
+                  <AiFillLeftCircle />
+                </IconContext.Provider>
+              }
+              nextLabel={
+                <IconContext.Provider value={{ color: "#31511E", size: "36px" }}>
+                  <AiFillRightCircle />
+                </IconContext.Provider>
+              }
             />
         </Layout>
       </main>
