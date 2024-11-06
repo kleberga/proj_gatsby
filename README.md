@@ -11,7 +11,7 @@ No quesito técnico, a aplicação possui as seguintes características:
 - A estilização dos elementos foi realizada com o framework Tailwind CSS;
 - Cada notícia é inserida em arquivos individuais no formato Markdown, que são posteriormente convertidos em HTML e renderizados na aplicação;
 - A geração da página inicial e das páginas de cada notícia é feita filtrando os elementos dos arquivos de notícias por meio da linguagem GraphQL;
-- Possui sistema de paginação, sendo mostradas no máximo 20 motícias em cada página;
+- Possui sistema de paginação, sendo mostradas no máximo 20 notícias em cada página;
 - As imagens das notícias são otimizadas pelo plugin 'gatsby-plugin-image'; e
 - O formulário de contato tem validações em todos os campos e as suas informações são enviadas para o Netlify.
 
