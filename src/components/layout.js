@@ -1,15 +1,16 @@
 import * as React from "react"
-import newspaper from "../images/economia3.jpg"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
-export default function Layout({children, botoes_log_reg = true}) {
+export default function Layout({children}) {
+    
     return(
         <body className="flex flex-col min-h-screen bg-green-100">
             <header>
                 <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
                     <div className="flex flex-wrap justify-between items-center mx-12">
                         <Link to="/" className="flex items-center">
-                            <img src={newspaper} className="w-full max-w-20 h-auto mr-3" alt="Notícias de Economia" />
+                            <StaticImage src="../images/economia3.png" className="w-full max-w-20 h-auto mr-3"  alt="Notícias de Economia" />
                             <span className="self-center text-xl font-bold whitespace-nowrap text-green-800">Notícias de Economia</span>
                         </Link>
                         <div className="flex items-center lg:order-2">
@@ -42,7 +43,7 @@ export default function Layout({children, botoes_log_reg = true}) {
                 <div className="w-full max-w-screen-xl mx-auto p-4 md:py-4">
                     <div className="sm:flex sm:items-center sm:justify-between">
                         <div className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                            <img src={newspaper} className="h-6" alt="Notícias de Economia" />
+                            <StaticImage src="../images/economia3.png" className="h-6 w-12" alt="Notícias de Economia" />
                             <span className="self-center text-1xl font-semibold whitespace-nowrap text-green-800">Notícias de Economia</span>
                         </div>
                         <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">

@@ -1,14 +1,14 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import GlobalNews from "../images/global_news.png"
 import Formulario from "../components/formulario"
+import { StaticImage } from "gatsby-plugin-image"
 
 export default function Contato(){
     return(
         <Layout>
             <div className="ml-12">
                 <div >
-                    <img src={GlobalNews} alt="Global News" width="130" className="border-solid border-2 border-green-500"></img>
+                <StaticImage src="../images/global_news.png" alt="Global News" width="130" height="60" className="border-solid border-2 border-green-500"/>
                 </div>
                 <Formulario/>
             </div>
