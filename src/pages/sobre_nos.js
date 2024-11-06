@@ -4,7 +4,8 @@ import { StaticImage } from "gatsby-plugin-image"
 
 export default function SobreNos(){
     return(
-        <Layout>
+        <Layout lang="pt-br">
+            <meta name="descricao" content="Página contendo informações sobre a Global News, empresa proprietária do site."></meta>
             <div className="ml-12">
                 <StaticImage src="../images/global_news.png" alt="Global News" width="130" height="60" className="border-solid border-2 border-green-500"/>
                 <br/>

@@ -32,7 +32,8 @@ import { IconContext } from "react-icons";
     const currentItems = array_sorted.slice(startIndex, endIndex);
 
     return (
-      <main>
+      <main lang="pt-br">
+        <meta name="descricao" content="Página Home contendo o título, subtítulo e data de publicação das notícias."></meta>
         <Layout>
         {currentItems.map((valor, index) =>{
           const caminho = typeof window !== 'undefined' ? window.location.href + valor.node.frontmatter.slug : '';

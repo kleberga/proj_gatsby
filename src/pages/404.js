@@ -25,20 +25,21 @@ const codeStyles = {
 
 const NotFoundPage = () => {
   return (
-    <main style={pageStyles}>
-      <h1 style={headingStyles}>Page not found</h1>
+    <main style={pageStyles} lang="pt-br">
+      <meta name="descricao" content="Página de erro ao acessar algum recurso da aplicação."></meta>
+      <h1 style={headingStyles}>Página não encontrada</h1>
       <p style={paragraphStyles}>
-        Sorry 😔, we couldn’t find what you were looking for.
+        Desculpe 😔, não encontramos o que você estava procurando.
         <br />
         {process.env.NODE_ENV === "development" ? (
           <>
             <br />
-            Try creating a page in <code style={codeStyles}>src/pages/</code>.
+            Tente criar uma página em <code style={codeStyles}>src/pages/</code>.
             <br />
           </>
         ) : null}
         <br />
-        <Link to="/">Go home</Link>.
+        <Link to="/">Ir para a Home</Link>.
       </p>
     </main>
   )

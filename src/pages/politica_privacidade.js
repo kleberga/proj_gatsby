@@ -4,7 +4,8 @@ import Layout from "../components/layout"
 
 export default function PoliticaPrivacidade(){
     return(
-        <Layout>
+        <Layout lang="pt-br">
+            <meta name="descricao" content="Página contendo a política de privacidade da aplicação."></meta>
             <div className="ml-12">
                 <h1 className="text-2xl font-bold">Política de Privacidade</h1>
                 <br/>

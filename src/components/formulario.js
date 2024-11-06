@@ -53,7 +53,7 @@ export default function Formulario(){
         /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email);
 
     return(
-        <div>
+        <div lang="pt-br">
             <h2 className="text-lg font-bold my-6">Entre em contato:</h2>
             <div className="container">
                 <form name="form_react" method="post" onSubmit={handleSubmit} 

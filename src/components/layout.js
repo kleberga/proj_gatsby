@@ -5,7 +5,7 @@ import { StaticImage } from "gatsby-plugin-image"
 export default function Layout({children}) {
     
     return(
-        <body className="flex flex-col min-h-screen bg-green-100">
+        <body className="flex flex-col min-h-screen bg-green-100" lang="pt-br">
             <header>
                 <nav className="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
                     <div className="flex flex-wrap justify-between items-center mx-12">
